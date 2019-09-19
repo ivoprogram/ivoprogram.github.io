@@ -1,0 +1,35 @@
+﻿
+
+body {
+    /*background-color: #ebe5d9;*/
+}
+
+
+header, footer {
+        background-color: #ebe5d9;
+
+}
+
+main {
+        background-color: white;
+
+}
+
+
+.row.alternate {
+    background-color: #F5F5F5;
+}
+
+nav a {
+    color: #444;
+}
+
+header h1 {
+    color: #444;
+}
+
+footer, footer a {
+    color: #333;
+}
+
+

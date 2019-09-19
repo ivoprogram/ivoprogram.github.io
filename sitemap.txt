@@ -1,0 +1,11 @@
+﻿http://ivoprogram.com/content/en/index.html
+http://ivoprogram.com/content/en/home.html
+http://ivoprogram.com/content/en/services.html
+http://ivoprogram.com/content/en/products.html
+http://ivoprogram.com/content/en/articles.html
+http://ivoprogram.com/content/en/about.html
+http://ivoprogram.com/content/en/menu.html
+http://ivoprogram.com/content/en/webjs.html
+http://ivoprogram.com/content/en/webutilsjs.html
+http://ivoprogram.com/content/en/articles/web-presence.html
+

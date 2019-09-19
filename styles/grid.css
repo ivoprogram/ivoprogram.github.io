@@ -1,0 +1,89 @@
+﻿
+
+/* CSS Responsive Grid 12 Columns -----------------------------------------*/
+
+* {
+    box-sizing: border-box;
+}
+
+.column1 {
+    width: 8.33%;
+}
+
+.column2 {
+    width: 16.66%;
+}
+
+.column3 {
+    width: 25%;
+}
+
+.column4 {
+    width: 33.33%;
+}
+
+.column5 {
+    width: 41.66%;
+}
+
+.column6 {
+    width: 50%;
+}
+
+.column7 {
+    width: 58.33%;
+}
+
+.column8 {
+    width: 66.66%;
+}
+
+.column9 {
+    width: 75%;
+}
+
+.column10 {
+    width: 83.33%;
+}
+
+.column11 {
+    width: 91.66%;
+}
+
+.column12 {
+    width: 100%;
+}
+
+
+.row > [class*="column"] {
+    float: left;
+}
+
+
+.row:after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+
+/* Phones  */
+@media only screen and (max-width: 767px) {
+
+    .row.responsive > [class*="column"] {
+        float: none;
+        width: 100%;
+    }
+}
+
+
+/* Tablets  */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+}
+
+
+/* Computers  */
+@media only screen and (min-width: 1025px) {
+}
+
+

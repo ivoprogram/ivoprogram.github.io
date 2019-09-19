@@ -1,0 +1,120 @@
+﻿
+/* Layout -----------------------------------------*/
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    font-size: 120%;
+}
+
+header {
+    /*background-color: silver;*/
+}
+
+
+
+nav {
+    /*overflow: auto;*/
+    float: right;
+    text-align: right;
+    /*background-color: gainsboro;*/
+    margin-top: 13px;
+    /*min-width: 40%;*/
+    /*padding-right: 10px;*/
+}
+
+
+main {
+    min-height: 400px;
+    /*overflow:auto;*/
+}
+
+footer {
+    /*background-color: silver;*/
+    min-height: 300px;
+}
+
+
+header, footer {
+    padding-left: 5%;
+    padding-right: 5%;
+    overflow: auto;
+}
+
+
+footer .row {
+    padding: 0px;
+    margin: 0px;
+}
+
+footer ul {
+    padding-left: 25px;
+}
+
+
+/* Sticky Header  -----------------------------------------*/
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 50px;
+}
+
+#header2 {
+        height: 50px;
+
+}
+
+main {
+    /*margin-top: 50px;*/
+    /*padding-top: 50px;*/
+}
+
+
+/* Html5  -----------------------------------------*/
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
+    display: block;
+}
+
+
+/* Responsive -----------------------------------------*/
+
+/* Phones  */
+@media only screen and (max-width: 767px) {
+
+}
+
+
+/* Tablets  */
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+}
+
+
+/* Computers  */
+@media only screen and (min-width: 1024px) and (max-width: 1599px) {
+}
+
+
+/* Big Screen  */
+@media only screen and (min-width: 1600px) {
+}
+

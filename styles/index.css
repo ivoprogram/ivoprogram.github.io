@@ -1,0 +1,129 @@
+﻿
+
+.site-title {
+    font-size: 26px;
+    font-weight: bold;
+    color: #555;
+    float: left;
+    margin: 0px;
+    margin-top: 10px;
+}
+
+.site-description {
+    font-size: 24px;
+    display: none;
+}
+
+
+.content {
+    overflow: auto;
+}
+
+.padding-left {
+    padding-left: 20px;
+}
+
+.padding-right {
+    padding-right: 20px;
+}
+
+
+h4 {
+    margin-top: 1em;
+    /*border-bottom:solid 2px gainsboro;
+min-width:70%;*/
+}
+
+
+.menu-ul {
+    padding-left: 20px;
+}
+
+    .menu-ul a {
+        display: inline-block;
+        min-width: 50%;
+        background-color: whitesmoke;
+        margin-bottom: 2px;
+        padding: 4px;
+    }
+
+p, li, dd {
+    max-width: 40em;
+}
+
+img {
+    max-width: 100%;
+}
+
+
+.copyright {
+    font-size: 90%;
+    padding-left: 10px;
+}
+
+    .copyright a {
+        color: #0288D1;
+    }
+
+.row {
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+    .row > div {
+        margin-bottom: -5px;
+    }
+
+#banner {
+    width: 100%;
+}
+
+
+.div-line {
+    height:40px;
+}
+
+.width640 {
+   width:640px;
+}
+
+/* Responsive -----------------------------------------*/
+
+/* Phones  */
+@media only screen and (max-width: 767px) {
+
+    .row {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .padding-left, .padding-right {
+        padding: 0px;
+    }
+
+    .menu-ul a {
+        min-width: 100%;
+    }
+
+    header > h1 {
+        font-size: 22px;
+        margin-top: 14px;
+    }
+}
+
+
+/* Tablets  */
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+}
+
+
+/* Computers  */
+@media only screen and (min-width: 1024px) and (max-width: 1599px) {
+}
+
+
+/* Big Screen  */
+@media only screen and (min-width: 1600px) {
+}

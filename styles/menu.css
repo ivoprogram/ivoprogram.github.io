@@ -1,0 +1,48 @@
+﻿
+
+/* Menu -----------------------------------------*/
+
+.menu {
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+    .menu > li a {
+        padding: 5px;
+    }
+
+    .menu.horizontal > li {
+        float: left;
+    }
+
+    .menu:after {
+        content: "";
+        clear: both;
+        display: table;
+    }
+
+
+
+
+/* Phones  */
+@media only screen and (max-width: 767px) {
+
+    .menu.responsive li {
+        display: none;
+    }
+
+        .menu.responsive li.show {
+            display: block;
+        }
+}
+
+
+/* Tablets  */
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+}
+
+
+/* Computers  */
+@media only screen and (min-width: 1024px) {
+}

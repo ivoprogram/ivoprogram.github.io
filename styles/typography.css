@@ -1,0 +1,123 @@
+﻿
+
+/* Typography -----------------------------------------*/
+
+@import url('https://fonts.googleapis.com/css?family=Roboto Condensed:400,600,700');
+
+
+body {
+    font-family: 'Roboto Condensed', serif;
+    font-size: 19px;
+    /*font-weight:500;*/
+    color:#222;
+}
+
+a, a:visited, a:active {
+    color: #0288D1;
+    text-decoration: none;
+}
+
+    a:hover {
+        color: #F44336;
+        /*text-decoration: underline;*/
+    }
+
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: bold;
+    color:#555;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+
+}
+
+h1 {
+    font-size: 32px;
+}
+
+h2 {
+    font-size: 30px;
+}
+
+h3 {
+    font-size: 28px;
+}
+
+h4, h5, h6 {
+    font-size: 26px;
+}
+
+p {
+    max-width: 35em;
+    line-height: 1.3em;
+}
+
+textarea {
+    max-width: 100%;
+    padding: 5px;
+    font-family: inherit;
+    font-size: inherit;
+}
+
+img {
+    max-width: 100%;
+}
+
+/*ul {
+    padding-left: 20px;
+    margin-left: 10px;
+}
+
+li {
+    line-height: 1.4em;
+    margin-bottom: 0.3em;
+}*/
+
+
+
+dt {
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+dd {
+    margin-left: 20px;
+    margin-top: 3px;
+    margin-bottom: 5px;
+}
+
+
+
+
+/* Responsive -----------------------------------------*/
+
+/* Phones  */
+@media only screen and (max-width: 767px) {
+
+    body {
+        font-size: 24px;
+    }
+}
+
+
+/* Tablets  */
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+        body {
+        font-size: 22px;
+    }
+
+}
+
+
+/* Computers  */
+@media only screen and (min-width: 1024px) and (max-width: 1599px) {
+    body {
+        text-rendering: optimizeLegibility;
+        -webkit-font-smoothing: antialiased;
+    }
+}
+
+
+/* Big Screen  */
+@media only screen and (min-width: 1600px) {
+}
