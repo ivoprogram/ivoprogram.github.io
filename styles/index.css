@@ -19,13 +19,6 @@
     overflow: auto;
 }
 
-.padding-left {
-    padding-left: 20px;
-}
-
-.padding-right {
-    padding-right: 20px;
-}
 
 
 h4 {
@@ -82,11 +75,32 @@ img {
 
 
 .div-line {
-    height:40px;
+    height: 40px;
 }
 
 .width640 {
-   width:640px;
+    width: 640px;
+}
+
+.padding-left {
+    padding-left: 20px;
+}
+
+.padding-right {
+    padding-right: 20px;
+}
+
+.margin-right {
+    margin-right: 100px;
+}
+
+
+.float-left {
+    float: left;
+}
+
+.clear {
+    clear: both;
 }
 
 /* Responsive -----------------------------------------*/
@@ -111,6 +125,15 @@ img {
         font-size: 22px;
         margin-top: 14px;
     }
+
+        .float-left {
+     float:none;
+}
+
+    .margin-right {
+    margin-right: 0px;
+}
+
 }
 
 
