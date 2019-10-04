@@ -1,0 +1,127 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Overwrite</title>
+</head>
+<body>
+
+    <div class="row">
+        <h1>Overwrite</h1>
+
+
+        <p>
+            Overwrite is a program that overwrites empty space on disk.
+        </p>
+
+        <img src="../../images/overwrite2.png" alt="Overwrite" />
+
+        <p>
+            The empty space on disks can contain sensitive data and informations that can be 
+            recovered with recovery software and forensics, this can be 
+           <strong>security and privacy risk</strong>.
+
+        </p>
+
+        <p>
+            The operating systems and programs automatically write and delete data on disks, for example word processor save copies of the document for recovery and later deletes them.
+            Also when users delete files they are only marked as deleted but the files remain on disk and can be recovered.
+        </p>
+
+        <p>
+            To protect security and privacy the remaining data on empty space on disks has to be overwritten.
+        </p>
+
+        <p>
+            To properly clean remaining data both metadata as file names and content has to be overwritten, this program has parameters as -files and -data that specify quantity of metadata and content that has to be overwritten.
+        </p>
+
+        <h2>Features</h2>
+        <ul>
+            <li>It is safe, does not overwrite existing files, and uses operating system for overwrite.
+
+            </li>
+            <li>Can be used on different file systems and operating systems, as NTFS EXT4 FAT Windows Linux.
+
+            </li>
+            <li>Different options can be specified, as block size, number of files, quantity of data.
+
+            </li>
+            <li>It is free and open source with general public licence.
+
+            </li>
+        </ul>
+
+
+        <h2>Download</h2>
+
+        <p>
+            Source code and executables for different architectures and operating systems can be found in code repositories.
+        </p>
+
+        <p>
+            Overwrite program is written in C programming language it is contained in one 
+            file, can be compiled on different operating systems and also can be 
+            used without compilation, the source code can be run directly with 
+            iny C compiler ex: tcc -run overwrite.c 
+        </p>
+
+                <strong>Source Code and Executables</strong>
+        <ul>
+            <li>
+                <a target="_blank" href="https://github.com/ivoprogram/overwrite">https://github.com/ivoprogram/overwrite</a>
+            </li>
+
+        </ul>
+
+
+        <h2>Usage</h2>
+
+        <pre>
+Overwrite empty space on disk, write number of small files and data.
+
+USAGE:
+overwrite [-h -test -one -rand -block:] (-files: &| -data:) -path:
+  -h             Print help and usage message.
+  -test          For test, don't delete written files.
+  -one           Overwrite with 1, default with 0.
+  -rand          Overwrite with random data, default with 0.
+  -block         Block size, default 4096 bytes as NTFS and EXT4.
+  -files         Number of files to write, block size each.
+  -data          Quantity of data to write, ex: 1mb, 1gb, all.
+  -path          Path to directory where to write data.
+
+EXAMPLE:
+# Write 10 files and 10Mb data, on NTFS
+overwrite -files:10 -data:10mb -path:c:\
+
+# Write random data, block size 512 bytes on FAT FS
+overwrite -rand -block:512 -files:10 -data:10mb -path:/mnt/usbdisk/
+
+Copyright GPLv3 http://github.com/ivoprogram/overwrite
+
+
+</pre>
+
+
+        <h2>References</h2>
+        <ul>
+            <li>
+                <a target="_blank" href="https://en.wikipedia.org/wiki/Data_remanence">Data Remanence</a>
+            </li>
+            <li>
+                <a target="_blank" href="https://en.wikipedia.org/wiki/Data_recovery">Data Recovery</a>
+            </li>
+            <li>
+                <a target="_blank" href="https://en.wikipedia.org/wiki/Data_erasure">Data Erasure</a>
+            </li>
+
+
+
+        </ul>
+
+        <br />
+        <br />
+
+    </div>
+</body>
+</html>
