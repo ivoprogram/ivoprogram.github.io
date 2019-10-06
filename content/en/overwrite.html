@@ -1,7 +1,11 @@
 ﻿<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <title>Overwrite</title>
+    <title>Overwrites empty space on disk for privacy and security</title>
+    <meta name="description" content="Overwrite is a program that overwrites empty space on disk." />
+    <meta name="keywords" content="Overwrite, Data erasure, data clearing, data wiping, data destruction, privacy, security," />
+    <meta name="author" content="Ivo Gjorgjievski" />
+
 </head>
 <body>
 
@@ -13,10 +17,10 @@
             Overwrite is a program that overwrites empty space on disk.
         </p>
 
-        <img src="../../images/overwrite2.png" alt="Overwrite" />
+        <img src="../../images/overwrite-linux2.png" alt="Overwrite" />
 
         <p>
-            The empty space on disks can contain <strong>sensitive data</strong> and informations that can be 
+            The empty space on disks can contain <strong>sensitive data</strong> and information that can be 
             recovered with recovery software and <strong>forensics</strong>, this can be 
            <strong>security and privacy risk</strong>.
 
@@ -24,7 +28,7 @@
 
         <p>
             The operating systems and programs automatically write and delete data on disks, 
-            for example text editors may save copies of the document for recovery and later deletes them.
+            for example text editors may save copies of the document for recovery and later delete them.
             Also when users delete files they are only marked as deleted but the files remain on disk and can be recovered.
         </p>
 
@@ -35,12 +39,13 @@
         <p>
             To properly clean remaining data both metadata as file names and content 
             has to be overwritten, this program has parameters as -files and -data that 
-            specify quantity of <strong>metadata and content</strong> that has to be overwritten.
+            specify quantity of <strong>metadata and data</strong> has to be overwritten.
         </p>
 
         <h2>Features</h2>
         <ul>
-            <li>It is <strong>safe</strong>, does not overwrite existing files, and uses operating system for overwrite.
+            <li>It is <strong>safe</strong>, does not overwrite existing files, and uses operating system for 
+                overwrite.
 
             </li>
             <li>Can be used on different file systems and operating systems, as NTFS EXT4 FAT Windows Linux.
@@ -58,7 +63,8 @@
         <h2>Download</h2>
 
         <p>
-            Source code and executables for different architectures and operating systems can be found in code repositories.
+            Source code and executables for different architectures and operating systems can be 
+            found in code repositories.
         </p>
 
         <p>
@@ -80,11 +86,12 @@
         <h2>Usage</h2>
 
         <pre>
-Overwrite empty space on disk, write number of small files and data.
+Overwrite empty space on disk, write small files and data.
 
 USAGE:
-overwrite [-h -test -one -rand -block:] (-files: &| -data:) -path:
+overwrite [-h -v -test -one -rand -block:] (-files: &| -data:) -path:
   -h             Print help and usage message.
+  -v             Print program version.
   -test          For test, don't delete written files.
   -one           Overwrite with 1, default with 0.
   -rand          Overwrite with random data, default with 0.
@@ -94,14 +101,13 @@ overwrite [-h -test -one -rand -block:] (-files: &| -data:) -path:
   -path          Path to directory where to write data.
 
 EXAMPLE:
-# Write 10 files and 10Mb data, on NTFS
+# Write 10 files and 10Mb data, on Windows
 overwrite -files:10 -data:10mb -path:c:\
 
-# Write random data, block size 512 bytes on FAT FS
+# Write random data, block size 512 bytes on Linux
 overwrite -rand -block:512 -files:10 -data:10mb -path:/mnt/usbdisk/
 
 Copyright GPLv3 http://github.com/ivoprogram/overwrite
-
 
 </pre>
 
