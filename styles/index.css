@@ -1,12 +1,13 @@
 ﻿
 
 .site-title {
+    font-family: 'Roboto', sans-serif;
     font-size: 26px;
     font-weight: bold;
-    color: #555;
+    color: #565656;
     float: left;
     margin: 0px;
-    margin-top: 10px;
+    margin-top: 6px;
 }
 
 .site-description {
@@ -27,6 +28,11 @@ h4 {
 min-width:70%;*/
 }
 
+nav .menu {
+     font-family: 'Roboto', sans-serif;
+    font-size:17px;
+    margin-top:13px;
+}
 
 .menu-ul {
     padding-left: 20px;
@@ -35,10 +41,14 @@ min-width:70%;*/
     .menu-ul a {
         display: inline-block;
         min-width: 50%;
-        background-color: whitesmoke;
+        background-color: #f8f8f8;
         margin-bottom: 2px;
         padding: 4px;
     }
+
+.ul-left {
+    padding-left: 20px;
+}
 
 p, li, dd {
     max-width: 40em;
@@ -103,6 +113,19 @@ img {
     clear: both;
 }
 
+.width600 {
+    max-width:300px;
+}
+
+.gallery a {
+    display:inline-block;
+    float:left;
+    max-width:300px;
+    margin-right:10px;
+        margin-bottom:10px;
+
+}
+
 /* Responsive -----------------------------------------*/
 
 /* Phones  */
@@ -121,9 +144,9 @@ img {
         min-width: 100%;
     }
 
-    header > h1 {
+    .site-title {
         font-size: 22px;
-        margin-top: 14px;
+        margin-top: 10px;
     }
 
         .float-left {

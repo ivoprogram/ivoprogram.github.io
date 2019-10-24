@@ -1,12 +1,12 @@
 ﻿
 
 body {
-    /*background-color: #ebe5d9;*/
+    background-color: #eae7dc;
 }
 
 
 header, footer {
-        background-color: #ebe5d9;
+    background-color: #eae7dc;
 
 }
 
@@ -24,9 +24,6 @@ nav a {
     color: #444;
 }
 
-header h1 {
-    color: #444;
-}
 
 footer, footer a {
     color: #333;

@@ -8,5 +8,7 @@ http://ivoprogram.com/content/en/menu.html
 http://ivoprogram.com/content/en/webjs.html
 http://ivoprogram.com/content/en/webutilsjs.html
 http://ivoprogram.com/content/en/overwrite.html
+http://ivoprogram.com/content/en/aspauth.html
+http://ivoprogram.com/content/en/presencecheck.html
 http://ivoprogram.com/content/en/articles/web-presence.html
 

@@ -2,14 +2,14 @@
 
 /* Typography -----------------------------------------*/
 
-@import url('https://fonts.googleapis.com/css?family=Roboto Condensed:400,600,700');
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,600,700');
 
 
 body {
-    font-family: 'Roboto Condensed',  sans-serif;
-    font-size: 18px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 17px;
     /*font-weight:500;*/
-    color:#555;
+    color: #545454;
 }
 
 a, a:visited, a:active {
@@ -24,11 +24,11 @@ a, a:visited, a:active {
 
 
 h1, h2, h3, h4, h5, h6 {
+    font-family: 'Roboto', sans-serif;
     font-weight: bold;
-    color:#555;
+    color: #555;
     margin-top: 0.5em;
     margin-bottom: 0.5em;
-
 }
 
 h1 {
@@ -95,17 +95,16 @@ dd {
 @media only screen and (max-width: 767px) {
 
     body {
-        font-size: 24px;
+        font-size: 20px;
     }
 }
 
 
 /* Tablets  */
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
-        body {
-        font-size: 22px;
+    body {
+        font-size: 20px;
     }
-
 }
 
 
