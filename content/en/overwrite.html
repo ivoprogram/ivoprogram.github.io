@@ -12,12 +12,12 @@
     <div class="row">
         <h1>Overwrite</h1>
 
-
         <p>
-            Overwrite is a program that overwrites empty space on disk.
+            Overwrite is a program that overwrites empty space on disk, 
+            metadata and data.
         </p>
 
-        <img src="../../images/overwrite-windows-ui.png" alt="Overwrite" />
+        <img src="../../images/overwrite-ui.png" alt="Overwrite" />
 
         <p>
             The empty space on disk can contain <strong>sensitive data</strong> and information that can be 
@@ -87,58 +87,90 @@
         <h2>Usage</h2>
 
         <pre>
-Overwrite empty space on disk, write small files and data. 
+Overwrite empty space on disk, metadata and data. 
 
 USAGE: 
-overwrite [-h -v -test -one -rand -block:] (-files: &| -data:) -path: 
+overwrite [-h -v -test -one -rand -block:] (-dirs: &| -data:) -path: 
   -h 		 Print help and usage message. 
   -v 		 Print program version. 
   -test 	 For test, don't delete written files. 
   -one 		 Overwrite with 1, default with 0. 
   -rand 	 Overwrite with random data, default with 0. 
   -block 	 Block size, default 4096 bytes as NTFS and EXT4. 
-  -files 	 Number of files to write block size each, ex: 10, all. 
+  -dirs 	 Number of directories to write, ex: 10, 100.
   -data 	 Quantity of data to write, ex: 1mb, 1gb, all. 
   -path 	 Path to directory where to write files. 
 
 EXAMPLE: 
-Write 10 files and 10Mb data, on Windows 
-overwrite -files:10 -data:10mb -path:c:\temp\ 
+Write 10 dirs and 10Mb data, on Windows 
+overwrite -dirs:10 -data:10mb -path:c:\ 
 
 Write random data, block size 512 bytes on Linux 
-overwrite -rand -block:512 -files:10 -path:/mnt/usbdisk/ 
+overwrite -rand -block:512 -data:10 -path:/mnt/usbdisk/ 
 
 Copyright GPLv3 http://github.com/ivoprogram/overwrite 
 
 </pre>
-
+        <p>
+            <strong>Metadata</strong>
+            <br />
+            Overwrite metadata 10 entries/files
+            <br />
+            overwrite -dirs:10 -path:c:\
+        </p>
+        <p>
+            <strong>Data</strong>
+            <br />
+            Overwrite data all empty space
+            <br />
+            overwrite -data:all -path:c:\
+        </p>
 
         <h2>How it works</h2>
 
         <p>
-            Overwrite program write files using operating system functions, and in this way overwrite the remaining data on disk.
+            Overwrite program write files and directories using operating system functions, 
+            and in this way overwrite the remaining metadata and data on disk.
 
         </p>
         <p>
-            When operating system delete file the file and space used by it is marked as free for new files, but the data is not cleaned and remain on disk, so when the new files are written the remaining data is  overwritten.
+            When operating system delete file the file and space used by 
+            it is marked as free for new files, 
+            but the data is not cleaned and remain on disk, 
+            so when the new files are written the remaining data is overwritten.
 
         </p>
         <p>
-            The file system is similar to dictionary has metadata that is summary information about the files and then the data, writing many small files overwrite the metadata, and writing big file overwrite the data, that is what the overwrite program does.
+            The file system is similar to dictionary has metadata that is 
+            summary information about the files and then data, writing many 
+            directories overwrite metadata, and writing big file overwrite data, 
+            that is what overwrite program does.
 
         </p>
+
+
+        <h2>Side Effects</h2>
         <p>
-            <strong>Note</strong>
-            <br />
             Overwrite of metadata is not always guaranteed, this depends on different factors as number 
             of files written, file system.
             <br />
-            For example on FAT file system files has to be written in the same directory of the 
-            deleted files when overwriting with small number of files.  
+            For example on FAT file system metadata has to be overwritten in the same directory of the 
+            deleted files.  
 
         </p>
 
-
+        <p>
+            Metadata should not be filled all at once, the parameter -dirs should be 
+            number of files to overwrite for example 100, 1000, it is not good practice more 
+            than 10.000.
+            <br />
+            NTFS file system on Windows internal metadata structure grow for maximum number 
+            of files ever written, when files are deleted the metadata entries are marked 
+            as free and ready for new files but space is not released. 
+           <br />
+            More details on link: 
+            <a target="_blank" href="https://support.microsoft.com/fr-dz/help/814594/how-to-locate-and-correct-disk-space-problems-on-ntfs-volumes#7">NTFS Master File Table Expansion</a>
+        </p>
 
         <h2>Photos</h2>
 
@@ -150,8 +182,8 @@ Copyright GPLv3 http://github.com/ivoprogram/overwrite
             <a target="_blank" href="../../images/overwrite-windows.png">
                 <img class="width600" src="../../images/overwrite-windows.png" alt="Presence Check" />
             </a>
-            <a target="_blank" href="../../images/overwrite-windows-ui.png">
-                <img class="width600" src="../../images/overwrite-windows-ui.png" alt="Presence Check" />
+            <a target="_blank" href="../../images/overwrite-ui.png">
+                <img class="width600" src="../../images/overwrite-ui.png" alt="Presence Check" />
             </a>
             <a target="_blank" href="../../images/overwrite-recuva.png">
                 <img class="width600" src="../../images/overwrite-recuva.png" alt="Presence Check" />
