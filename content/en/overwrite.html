@@ -39,7 +39,7 @@
 
         <p>
             To properly clean remaining data both metadata as file names and content 
-            has to be overwritten, this program has parameters as -files and -data that 
+            has to be overwritten, this program has parameters as -dirs and -data that 
             specify quantity of <strong>metadata and data</strong> has to be overwritten.
         </p>
 
@@ -106,7 +106,7 @@ Write 10 dirs and 10Mb data, on Windows
 overwrite -dirs:10 -data:10mb -path:c:\ 
 
 Write random data, block size 512 bytes on Linux 
-overwrite -rand -block:512 -data:10 -path:/mnt/usbdisk/ 
+overwrite -rand -block:512 -data:10mb -path:/mnt/usbdisk/ 
 
 Copyright GPLv3 http://github.com/ivoprogram/overwrite 
 
@@ -165,9 +165,10 @@ Copyright GPLv3 http://github.com/ivoprogram/overwrite
             number of files to overwrite for example 100, 1000, it is not good practice more 
             than 10.000.
             <br />
-            NTFS file system on Windows internal metadata structure grow for maximum number 
-            of files ever written, when files are deleted the metadata entries are marked 
-            as free and ready for new files but space is not released. 
+            NTFS file system on Windows metadata structure grow for maximum number 
+            of files written at one poin in time, when files are deleted 
+            metadata entries are marked as free and ready for new files 
+            but space is not released. 
            <br />
             More details on link: 
             <a target="_blank" href="https://support.microsoft.com/fr-dz/help/814594/how-to-locate-and-correct-disk-space-problems-on-ntfs-volumes#7">NTFS Master File Table Expansion</a>
