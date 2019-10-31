@@ -29,9 +29,9 @@ min-width:70%;*/
 }
 
 nav .menu {
-     font-family: 'Roboto', sans-serif;
-    font-size:17px;
-    margin-top:13px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 17px;
+    margin-top: 13px;
 }
 
 .menu-ul {
@@ -114,18 +114,39 @@ img {
 }
 
 .width600 {
-    max-width:300px;
+    max-width: 300px;
 }
 
 .gallery a {
-    display:inline-block;
-    float:left;
-    max-width:300px;
-    margin-right:10px;
-        margin-bottom:10px;
-
+    display: inline-block;
+    float: left;
+    max-width: 300px;
+    margin-right: 10px;
+    margin-bottom: 10px;
 }
 
+.news {
+    display: inline-block;
+    overflow:auto;
+    /*min-width: 70%;*/
+    max-height:90px;
+    padding: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border: solid 2px gainsboro;
+    /*background-color:whitesmoke;*/
+}
+
+.news ul{
+    padding-left:20px;
+    padding-right:0px;
+    margin:0px;
+    font-size:15px;
+}
+
+    .news li{
+        margin-bottom:3px;
+    }
 /* Responsive -----------------------------------------*/
 
 /* Phones  */
@@ -149,14 +170,13 @@ img {
         margin-top: 10px;
     }
 
-        .float-left {
-     float:none;
-}
+    .float-left {
+        float: none;
+    }
 
     .margin-right {
-    margin-right: 0px;
-}
-
+        margin-right: 0px;
+    }
 }
 
 

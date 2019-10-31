@@ -25,7 +25,7 @@ nav a {
 }
 
 
-footer, footer a {
+footer, footer a, footer a, footer a:visited,footer a:active {
     color: #333;
 }
 
