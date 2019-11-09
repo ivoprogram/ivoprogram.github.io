@@ -39,7 +39,7 @@
 
         <p>
             To properly clean remaining data both metadata as file names and content 
-            has to be overwritten, this program has parameters as -dirs and -data that 
+            has to be overwritten, this program has parameters as -meta and -data that 
             specify quantity of <strong>metadata and data</strong> has to be overwritten.
         </p>
 
@@ -97,25 +97,25 @@
 
         <pre>
 Overwrite empty space on disk data and metadata.
-Version 1.4 2019-11-02
+Version 1.5 2019-11-09
 
 USAGE: 
-overwrite [-h -v -test -one -rand -block:] (-dirs: &| -data:) -path: 
+overwrite [-h -v -test -one -rand -block:] (-meta: &| -data:) -path: 
   -h 		 Print help and usage message. 
   -v 		 Print program version. 
   -test 	 For test, don't delete written files. 
   -one 		 Overwrite with 1, default with 0. 
   -rand 	 Overwrite with random data, default with 0. 
   -block 	 Block size, default 4096 bytes as NTFS and EXT4. 
-  -dirs 	 Number of directories to write, ex: 10, 100.
-  -data 	 Quantity of data to write, ex: 1mb, 1gb, all. 
+  -meta 	 Number of metadata to write, ex: 1, 10.
+  -data 	 Quantity of data to write, 1mb, 1gb, all, default mb. 
   -path 	 Path to directory where to write. 
 
 EXAMPLE: 
-- Write 10 dirs and 10Mb data, on Windows 
-overwrite -dirs:10 -data:10mb -path:c:\ 
-- Write random data, block size 512 bytes on Linux 
-overwrite -rand -block:512 -data:10mb -path:/mnt/usbdisk/ 
+- Write 10 metadata and 10Mb data, on Windows 
+overwrite -meta:10 -data:10 -path:c:\ 
+- Write random, block 512 bytes, 10Mb data, on Linux 
+overwrite -rand -block:512 -data:10 -path:/mnt/usbdisk/ 
 
 Copyright GPLv3 http://github.com/ivoprogram/overwrite 
 
@@ -166,10 +166,10 @@ Copyright GPLv3 http://github.com/ivoprogram/overwrite
             <dd>Writing files with data overwrite data on disk. 
                 <br />
                 The content of written data is specified by parameters -one and -rand, 
-                the size is specified in mb, gb, all.
+                the size is specified in mb, gb, all, default is mb (Megabytes).
             </dd>
             <dt>Path</dt>
-            <dd>Path where to write data and directories.
+            <dd>Path where to write data and metadata.
             </dd>
 
         </dl>
@@ -194,10 +194,10 @@ Copyright GPLv3 http://github.com/ivoprogram/overwrite
             The file system is similar to dictionary has metadata that is 
             summary information about the files and then data, writing many 
             directories overwrite metadata, and writing big file overwrite data, 
-            that is what overwrite program does.
+            that is what the overwrite program does.
 
         </p>
-                <br />
+        <br />
 
 
         <h2>Limitations</h2>
@@ -205,9 +205,7 @@ Copyright GPLv3 http://github.com/ivoprogram/overwrite
         <p>
             <strong>Unicode</strong>
             <br />
-            Unicode path is not supported in command line overwrite.c
-            <br />
-            Should be supported in next releases.
+            Unicode path is not supported in command line overwrite.c on Windows.
 
         </p>
         <p>
@@ -217,7 +215,7 @@ Copyright GPLv3 http://github.com/ivoprogram/overwrite
             different factors as number of files written, file system.
             <br />
             On some file systems to overwrite one entry in metadata has to be 
-            specified more entries in -dirs parameter, ex. -dirs:2 or -dirs:n
+            specified more entries in -meta parameter, ex. -meta:2 or -meta:n
             <br />
             This behavior has been reported in testing on FAT and EXT4 file sytems.
 
@@ -235,7 +233,7 @@ Copyright GPLv3 http://github.com/ivoprogram/overwrite
             <br />
 
             <strong>Metadata should not be filled all at once</strong>
-            , the parameter -dirs should be for example 100, 1000, 
+            , the parameter -meta should be for example 100, 1000, 
             it is not good practice more than 10.000.
             <br />
             NTFS file system metadata structure grow for maximum number 
