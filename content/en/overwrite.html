@@ -212,22 +212,29 @@ Copyright GPLv3 http://github.com/ivoprogram/overwrite
             <strong>Metadata</strong>
             <br />
             Overwrite of metadata is not always guaranteed, this depends on 
-            different factors as number of files written, file system.
+            different factors as number of files written, file name length, file system.
             <br />
-            On some file systems to overwrite one entry in metadata has to be 
+            <br />
+
+            On some file systems the metadata has to be overwritten in 
+            the same directory of deleted files, and   
+            for long file names for one entry in metadata has to be 
             specified more entries in -meta parameter, ex. -meta:2 or -meta:n
             <br />
-            This behavior has been reported in testing on FAT and EXT4 file sytems.
-
-        </p>
-        <p>
-            <strong>FAT File System</strong>
             <br />
-            On FAT file system metadata has to be overwritten in 
-            the same directory of deleted files.  
+            This behavior has been reported in testing on 
+            FAT, EXT2, EXT3, EXT4 file sytems.
+
+            <br />
+            <br />
+            To clean metadata on EXT3, EXT4 file systems the journal has to be 
+            disabled clean and enabled. For example visit the link: 
+            <a target="_blank"
+                href="https://github.com/ivoprogram/overwrite-testing/tree/master/ivoprogram/02">Overwrite Testing</a>
+
+            <br />
 
         </p>
-
         <p>
             <strong>NTFS File System</strong>
             <br />
@@ -235,6 +242,7 @@ Copyright GPLv3 http://github.com/ivoprogram/overwrite
             <strong>Metadata should not be filled all at once</strong>
             , the parameter -meta should be for example 100, 1000, 
             it is not good practice more than 10.000.
+            <br />
             <br />
             NTFS file system metadata structure grow for maximum number 
             of files written at one point in time, when files are deleted 
