@@ -40,7 +40,7 @@
         <p>
             To properly clean remaining data both metadata as file names and content 
             has to be overwritten, this program has parameters as -meta and -data that 
-            specify quantity of <strong>metadata and data</strong> has to be overwritten.
+            specify quantity of <strong>data and metadata</strong> has to be overwritten.
         </p>
 
         <h2>Features</h2>
@@ -49,7 +49,8 @@
                 overwrite.
 
             </li>
-            <li>Can be used on different file systems and operating systems, as NTFS EXT4 FAT Windows Linux.
+            <li>Can be used on different file systems and operating systems, 
+                <br /> as NTFS UFS EXT FAT Windows Linux Unix.
 
             </li>
             <li>Different options can be specified, as block size, number of files, quantity of data.
@@ -97,7 +98,7 @@
 
         <pre>
 Overwrite empty space on disk data and metadata.
-Version 1.5 2019-11-09
+Overwrite Version 1.6 2019-11-21
 
 USAGE: 
 overwrite [-h -v -test -one -rand -block:] (-meta: &| -data:) -path: 
@@ -130,20 +131,20 @@ Copyright GPLv3 http://github.com/ivoprogram/overwrite
 
             </dd>
             <dt>One</dt>
-            <dd>The data will be overwritten with one's, all bits set to one.
+            <dd>The data will be overwritten with one, all bits set to one.
 
             </dd>
             <dt>Rand</dt>
-            <dd>The data will be overwritten with random content, one and zero.
+            <dd>The data will be overwritten with random content, bits one and zero.
 
             </dd>
             <dt>Block</dt>
             <dd>Block size on every data write. 
-                    Operating System write data in block/sector of bytes 
-                    not in single bytes. This is important for overwrite because 
+                Operating System write data in block/sector of bytes 
+                not in single bytes. This is important for overwrite because 
                 entire blocks has to be ovewritten.
                 <br />
-                Different File Systems may have different block size, NTFS and EXT4 
+                Different File Systems may have different block size, NTFS and EXT 
                 (hard disk) have block 4096 bytes, FAT (USB Stick) has block 512 bytes.
                
                 <br />
@@ -157,14 +158,18 @@ Copyright GPLv3 http://github.com/ivoprogram/overwrite
             </dd>
 
             <dt>Meta</dt>
-            <dd>Writing directories overwrite metadata as file names.
+            <dd>
+                Number of metadata entries to overwrite.
                 <br />
+
                 If the metadata is not overwritten the forensic software will see that
                 the files where existed, their name size date and so on.
             </dd>
             <dt>Data</dt>
-            <dd>Writing files with data overwrite data on disk. 
-                <br />
+            <dd>Quantity of data to write, 
+                this parameter will write one big file with data.
+                  <br />
+              
                 The content of written data is specified by parameters -one and -rand, 
                 the size is specified in mb, gb, all, default is mb (Megabytes).
             </dd>
@@ -179,24 +184,35 @@ Copyright GPLv3 http://github.com/ivoprogram/overwrite
         <h2>How it works</h2>
 
         <p>
-            Overwrite program write files and directories using operating system functions, 
-            and in this way overwrite the remaining metadata and data on disk.
+            Overwrite program write small files and one big file 
+            using operating system functions, 
+            and in this way overwrite the remaining data and metadata on disk.
 
         </p>
         <p>
             When operating system delete file the file and space used by 
             it is marked as free for new files, 
-            but the data is not cleaned and remain on disk, 
-            so when the new files are written the remaining data is overwritten.
+            but the data and metadata is not cleaned and remain on disk, 
+            when the new files are written the remaining data is overwritten.
 
         </p>
         <p>
-            The file system is similar to dictionary has metadata that is 
-            summary information about the files and then data, writing many 
-            directories overwrite metadata, and writing big file overwrite data, 
-            that is what the overwrite program does.
+            The File System is similar to dictionary has metadata that is 
+            summary information about the files and then data, writing small files  
+            overwrite metadata, and writing big file overwrite data, 
+            this is what the overwrite program does.
 
         </p>
+        <p>
+            For more information I recommend the book: 
+            <br />
+ <a target="_blank" href="https://www.oreilly.com/library/view/file-system-forensic/0321268172/">
+     File System Forensic Analysis by Brian Carrier </a>
+            <br />
+                <img src="../../images/file-system-forensic-analysis.jpg" alt="File System Forensic Analysis" />
+
+        </p>
+
         <br />
 
 
@@ -217,25 +233,19 @@ Copyright GPLv3 http://github.com/ivoprogram/overwrite
             <br />
 
             On some file systems the metadata has to be overwritten in 
-            the same directory of deleted files, and   
-            for long file names for one entry in metadata has to be 
-            specified more entries in -meta parameter, ex. -meta:2 or -meta:n
+            the same directory of deleted files, and -meta parameter should have 
+            bigger number that metadata entries to clean.
             <br />
             <br />
             This behavior has been reported in testing on 
-            FAT, EXT2, EXT3, EXT4 file sytems.
-            <br />
-            <br />
-            New reports in testing say that metadata in "root directory" 
-            of these file systems is not properly clean, this issues will be 
-            addressed in the next releases.
+            FAT, EXT2, EXT3, EXT4 File Sytems.
 
             <br />
             <br />
-            To clean metadata on EXT3, EXT4 file systems the journal has to be 
-            disabled clean and enabled. For example visit the link: 
+            To see the testing results visit the link: 
+            <br />
             <a target="_blank"
-                href="https://github.com/ivoprogram/overwrite-testing/tree/master/ivoprogram/02">Overwrite Testing</a>
+                href="https://github.com/ivoprogram/overwrite-testing/">Overwrite Testing</a>
 
             <br />
 
@@ -246,7 +256,9 @@ Copyright GPLv3 http://github.com/ivoprogram/overwrite
 
             <strong>Metadata should not be filled all at once</strong>
             , the parameter -meta should be for example 100, 1000, 
-            it is not good practice more than 10.000.
+            it is not good practice more than 10.000. This is not restriction just 
+            good practice, if more that 10.000 files has been deleted then -meta parameter 
+            can be bigger.
             <br />
             <br />
             NTFS file system metadata structure grow for maximum number 
@@ -279,6 +291,9 @@ Copyright GPLv3 http://github.com/ivoprogram/overwrite
 
             <a target="_blank" href="../../images/overwrite-recuva.png">
                 <img class="width600" src="../../images/overwrite-recuva.png" alt="Overwrite" />
+            </a>
+            <a target="_blank" href="../../images/overwrite-unix-ufs.png">
+                <img class="width600" src="../../images/overwrite-unix-ufs.png" alt="Overwrite unix ufs" />
             </a>
 
         </div>
