@@ -29,7 +29,8 @@
         <p>
             The operating systems and programs automatically write and delete data on disk, 
             for example text editors may save copies of the document for recovery and later delete them.
-            Also when users delete files they are only marked as deleted but the files remain on disk and can be recovered.
+            Also when users delete files they are only marked as deleted 
+            but <strong>the files remain on disk and can be recovered</strong>.
         </p>
 
         <p>
@@ -43,6 +44,7 @@
             specify quantity of <strong>data and metadata</strong> has to be overwritten.
         </p>
 
+        <br />
         <h2>Features</h2>
         <ul>
             <li>It is <strong>safe</strong>, does not overwrite existing files, and use operating system for 
@@ -56,12 +58,12 @@
             <li>Different options can be specified, as block size, number of files, quantity of data.
 
             </li>
-            <li>It is free and open source with general public licence.
+            <li>It is <strong>free and open source</strong> with general public licence.
 
             </li>
         </ul>
 
-
+        <br />
         <h2>Download</h2>
 
         <p>
@@ -93,6 +95,7 @@
 
         </ul>
 
+        <br />
 
         <h2>Usage</h2>
 
@@ -127,7 +130,7 @@ Copyright GPLv3 http://github.com/ivoprogram/overwrite
 
         <dl>
             <dt>Test</dt>
-            <dd>This parameter is used for testing, to analyze written directories and files. 
+            <dd>This parameter is used for testing, to analyze written files. 
 
             </dd>
             <dt>One</dt>
@@ -140,18 +143,16 @@ Copyright GPLv3 http://github.com/ivoprogram/overwrite
             </dd>
             <dt>Block</dt>
             <dd>Block size on every data write. 
-                Operating System write data in block/sector of bytes 
-                not in single bytes. This is important for overwrite because 
+                Operating System write data in block/sector of bytes. 
+                <br />
+                This is important for overwrite because 
                 entire blocks has to be ovewritten.
                 <br />
-                Different File Systems may have different block size, NTFS and EXT 
+                File systems may have different block size, NTFS and EXT 
                 (hard disk) have block 4096 bytes, FAT (USB Stick) has block 512 bytes.
-               
-                <br />
-
+                
                 <a target="_blank" href="https://en.wikipedia.org/wiki/Disk_sector">Disk sector
-                </a>
-                <br />
+                </a>, 
                 <a target="_blank" href="https://en.wikipedia.org/wiki/Block_(data_storage)">Block data storage
                 </a>
 
@@ -171,7 +172,7 @@ Copyright GPLv3 http://github.com/ivoprogram/overwrite
                   <br />
               
                 The content of written data is specified by parameters -one and -rand, 
-                the size is specified in mb, gb, all, default is mb (Megabytes).
+                the size is specified in mb(Megabytes), gb(Gigabytes), all, default is mb.
             </dd>
             <dt>Path</dt>
             <dd>Path where to write data and metadata.
@@ -185,19 +186,19 @@ Copyright GPLv3 http://github.com/ivoprogram/overwrite
 
         <p>
             Overwrite program write small files and one big file 
-            using operating system functions, 
+            using the operating system, 
             and in this way overwrite the remaining data and metadata on disk.
 
         </p>
         <p>
-            When operating system delete file the file and space used by 
+            When operating system delete file the space used by 
             it is marked as free for new files, 
             but the data and metadata is not cleaned and remain on disk, 
             when the new files are written the remaining data is overwritten.
 
         </p>
         <p>
-            The File System is similar to dictionary has metadata that is 
+            The File System has metadata that is 
             summary information about the files and then data, writing small files  
             overwrite metadata, and writing big file overwrite data, 
             this is what the overwrite program does.
@@ -208,6 +209,7 @@ Copyright GPLv3 http://github.com/ivoprogram/overwrite
             <br />
  <a target="_blank" href="https://www.oreilly.com/library/view/file-system-forensic/0321268172/">
      File System Forensic Analysis by Brian Carrier </a>
+            <br />
             <br />
                 <img src="../../images/file-system-forensic-analysis.jpg" alt="File System Forensic Analysis" />
 
@@ -234,11 +236,11 @@ Copyright GPLv3 http://github.com/ivoprogram/overwrite
 
             On some file systems the metadata has to be overwritten in 
             the same directory of deleted files, and -meta parameter should have 
-            bigger number that metadata entries to clean.
+            bigger number than metadata entries to clean.
             <br />
             <br />
             This behavior has been reported in testing on 
-            FAT, EXT2, EXT3, EXT4 File Sytems.
+            FAT, EXT2, EXT3, EXT4 file sytems.
 
             <br />
             <br />
