@@ -31,7 +31,8 @@ footer {
 }
 
 .copyright {
-    font-size: smaller;
+    font-size: 90%;
+    padding-left: 10px;
 }
 
     .copyright a {
