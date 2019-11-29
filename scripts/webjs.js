@@ -1,12 +1,15 @@
 ﻿
 /*
 
-Title: WebJS
-Description: WebJS is a web framework for client side web development.
-Author: Ivo Gjorgjievski
-Website: ivoprogram.com
-License: GNU General Public License v3.0 https://www.gnu.org/licenses/gpl-3.0.en.html
-Dependency: JQuery
+TITLE:			WebJS Framework
+DESCRIPTION:	WebJS is a web framework for client side web development.
+VERSION:		2.0 2019-11-28
+CODE:			github.com/ivoprogram/webjs
+LICENSE:		GNU General Public License v3.0 http://www.gnu.org/licenses/gpl.html
+DEPENDENCY:     JQuery
+
+AUTHOR:			Ivo Gjorgjievski
+WEBSITE:		ivoprogram.github.io
 
 */
 
@@ -17,7 +20,7 @@ var webjs = webjs || {};
 // Closure 
 (function () {
 
-    var homeUrl = "home.html";
+    var homePage = "home.html";
 
     // ready
     $(document).ready(function () {
@@ -37,22 +40,36 @@ var webjs = webjs || {};
         $("a").on("click", webjs.contentRequest);
 
         // Load home page
-        webjs.contentLoad(contentUrl());
+        webjs.contentLoad(homeUrl());
 
     } // function
 
 
-    // contentUrl
-    function contentUrl() {
+    // homeUrl
+    function homeUrl() {
 
-        // Get content from home url or parameters
-        var url = homeUrl;
-        var params = document.URL.split("content=");
-        if (params[1]) {
-            url = params[1];
-            url = url.split("?")[0];
-            url = url.split("&")[0];
+        // Get home url from variable or url parameters
+        var url = homePage;
+
+        if (document.URL.indexOf("c=") !== -1)
+        {
+            url = document.URL.split("c=")[1];
         }
+
+        if (document.URL.indexOf("content=") !== -1) {
+            url = document.URL.split("content=")[1];
+        }
+
+        if (document.URL.indexOf("a=") !== -1) {
+            url = "articles/" + document.URL.split("a=")[1];
+        }
+
+        if (document.URL.indexOf("article=") !== -1) {
+            url = "articles/" + document.URL.split("article=")[1];
+        }
+
+        url = url.split("?")[0];    // Remove additional parameters
+        url = url.split("&")[0];
 
         return url;
 
@@ -75,14 +92,14 @@ var webjs = webjs || {};
         // Stop click propagation
         event.preventDefault();
 
-        // 
+        // Load url in content area
         var url = $(this).context.href;
         webjs.contentLoad(url);
 
     }// function
 
 
-    // contentLoad
+    // Load url in content area
     webjs.contentLoad = function (url) {
 
         var content = $("<html></html>");

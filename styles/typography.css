@@ -1,6 +1,6 @@
 ﻿
 
-/* Typography -----------------------------------------*/
+/* Typography ----- */
 
 @import url('https://fonts.googleapis.com/css?family=Roboto:400,600,700');
 
@@ -32,23 +32,23 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-    font-size: 32px;
+    font-size: 150%;
 }
 
 h2 {
-    font-size: 30px;
+    font-size: 140%;
 }
 
 h3 {
-    font-size: 28px;
+    font-size: 130%;
 }
 
 h4, h5, h6 {
-    font-size: 26px;
+    font-size: 120%;
 }
 
 p {
-    max-width: 35em;
+    max-width: 40em;
     line-height: 1.3em;
 }
 
@@ -89,7 +89,7 @@ dd {
 
 
 
-/* Responsive -----------------------------------------*/
+/* Responsive ----- */
 
 /* Phones  */
 @media only screen and (max-width: 767px) {

@@ -1,33 +1,42 @@
 ﻿
 
-/* Menu -----------------------------------------*/
+/* Menu ----- */
 
 .menu {
-    list-style-type: none;
     margin: 0px;
-    padding: 0px;
+    padding-left: 20px;
+    color: dimgray;
 }
 
-    .menu > li a {
-        padding: 5px;
+    .menu > li {
+        margin-bottom: 5px;
     }
 
-    .menu.horizontal > li {
-        float: left;
+        .menu > li a {
+            padding: 5px;
+        }
+
+    .menu.horizontal {
+        list-style-type: none;
+        padding-left: 0px;
     }
 
-    .menu:after {
-        content: "";
-        clear: both;
-        display: table;
-    }
+        .menu.horizontal > li {
+            float: left;
+            margin-bottom: 0px;
+        }
+
+        .menu:after {
+            content: "";
+            clear: both;
+            display: table;
+        }
 
 
-
+/* Responsive ----- */
 
 /* Phones  */
 @media only screen and (max-width: 767px) {
-
     .menu.responsive li {
         display: none;
     }
@@ -37,12 +46,16 @@
         }
 }
 
-
 /* Tablets  */
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
 }
 
 
 /* Computers  */
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 1024px) and (max-width: 1599px) {
+}
+
+
+/* Big Screen  */
+@media only screen and (min-width: 1600px) {
 }

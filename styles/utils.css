@@ -1,0 +1,53 @@
+﻿
+
+
+
+/* Misc ----- */
+
+.float-left {
+    float: left;
+}
+
+.float-right {
+    float: right;
+}
+
+.clear {
+    clear: both;
+}
+
+.block {
+    display:block;
+}
+
+.margin-right50 {
+    margin-right: 50px;
+}
+
+.margin-right100 {
+    margin-right: 100px;
+}
+
+.margin-bottom50 {
+    margin-bottom: 50px;
+}
+
+/* Responsive ----- */
+
+/* Phones  */
+@media only screen and (max-width: 767px) {
+}
+
+/* Tablets  */
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+}
+
+
+/* Computers  */
+@media only screen and (min-width: 1024px) and (max-width: 1599px) {
+}
+
+
+/* Big Screen  */
+@media only screen and (min-width: 1600px) {
+}

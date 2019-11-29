@@ -1,89 +1,120 @@
 ﻿
-
-/* CSS Responsive Grid 12 Columns -----------------------------------------*/
+/* CSS Responsive Grid 12 grid-cols 
+    <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    ----- */
 
 * {
     box-sizing: border-box;
 }
 
-.column1 {
+.grid-col1 {
     width: 8.33%;
 }
 
-.column2 {
+.grid-col2 {
     width: 16.66%;
 }
 
-.column3 {
+.grid-col3 {
     width: 25%;
 }
 
-.column4 {
+.grid-col4 {
     width: 33.33%;
 }
 
-.column5 {
+.grid-col5 {
     width: 41.66%;
 }
 
-.column6 {
+.grid-col6 {
     width: 50%;
 }
 
-.column7 {
+.grid-col7 {
     width: 58.33%;
 }
 
-.column8 {
+.grid-col8 {
     width: 66.66%;
 }
 
-.column9 {
+.grid-col9 {
     width: 75%;
 }
 
-.column10 {
+.grid-col10 {
     width: 83.33%;
 }
 
-.column11 {
+.grid-col11 {
     width: 91.66%;
 }
 
-.column12 {
+.grid-col12 {
     width: 100%;
 }
 
-
-.row > [class*="column"] {
+.grid-row > [class*="grid-col"] {
     float: left;
 }
 
 
-.row:after {
+.grid-row:after {
     content: "";
     clear: both;
     display: table;
 }
 
+.grid-row .padding-left {
+    padding-left: 30px;
+}
 
-/* Phones  */
-@media only screen and (max-width: 767px) {
+.grid-row.padding-right {
+    padding-right: 30px;
+}
 
-    .row.responsive > [class*="column"] {
-        float: none;
+
+
+/* Responsive ----- */
+
+/* Phones */
+@media only screen and (max-width: 640px) {
+    .grid-row.responsive > [class*="grid-col"] {
         width: 100%;
+        /*background: red;*/
+    }
+
+    .grid-row .padding-left {
+    padding-left: 0px;
+}
+
+.grid-row.padding-right {
+    padding-right: 0px;
+}
+
+}
+
+/* Tablets portrait */
+@media only screen and (min-width: 641px) and (max-width: 900px) {
+    .grid-row.responsive > [class*="grid-col"] {
+        width: 50%;
+        /*background: green;*/
     }
 }
 
-
-/* Tablets  */
-@media only screen and (min-width: 768px) and (max-width: 1024px) {
+/* Tablets landscape */
+@media only screen and (min-width: 901px) and (max-width: 1024px) {
+    .grid-row.responsive > [class*="grid-col"] {
+        /*width: 33.33%;*/
+        /*background: blue;*/
+    }
 }
 
-
-/* Computers  */
+/* PC */
 @media only screen and (min-width: 1025px) {
+    .grid-row.responsive > [class*="grid-col"] {
+        /*background: orange;*/
+    }
 }
-
-

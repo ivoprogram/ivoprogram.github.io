@@ -1,135 +1,48 @@
 ﻿
 
-.site-title {
-    font-family: 'Roboto', sans-serif;
-    font-size: 26px;
-    font-weight: bold;
-    color: #565656;
+h1 {
+    margin-top: 30px;
+}
+
+.h1-home {
+    margin-top: auto;
+}
+
+h2 {
+    margin-top: 50px;
+}
+
+.home h2 {
+    margin-top: auto;
+}
+
+nav a, footer a, footer a:visited, footer a:active {
+    color: #555;
+}
+
+footer {
+    padding-top: 10px;
+}
+
+.image-left {
     float: left;
-    margin: 0px;
-    margin-top: 6px;
+    width: 50%;
+    height: 300px;
 }
-
-.site-description {
-    font-size: 24px;
-    display: none;
-}
-
-
-.content {
-    overflow: auto;
-}
-
-
-
-h4 {
-    margin-top: 1em;
-    /*border-bottom:solid 2px gainsboro;
-min-width:70%;*/
-}
-
-nav .menu {
-    font-family: 'Roboto', sans-serif;
-    font-size: 17px;
-    margin-top: 13px;
-}
-
-.menu-ul {
-    padding-left: 20px;
-}
-
-    .menu-ul a {
-        display: inline-block;
-        min-width: 50%;
-        background-color: #f8f8f8;
-        margin-bottom: 2px;
-        padding: 4px;
-    }
-
-.ul-left {
-    padding-left: 20px;
-}
-
-p, li, dd {
-    max-width: 40em;
-}
-
-img {
-    max-width: 100%;
-}
-
 
 .copyright {
-    font-size: 90%;
-    padding-left: 10px;
+    font-size: smaller;
 }
 
     .copyright a {
         color: #0288D1;
     }
 
-.row {
-    padding-left: 10%;
-    padding-right: 10%;
-    padding-top: 30px;
-    padding-bottom: 30px;
-}
-
-    .row > div {
-        margin-bottom: -5px;
-    }
-
-#banner {
-    width: 100%;
-}
-
-
-.div-line {
-    height: 40px;
-}
-
-.width640 {
-    width: 640px;
-}
-
-.padding-left {
-    padding-left: 20px;
-}
-
-.padding-right {
-    padding-right: 20px;
-}
-
-.margin-right {
-    margin-right: 100px;
-}
-
-
-.float-left {
-    float: left;
-}
-
-.clear {
-    clear: both;
-}
-
-.width600 {
-    max-width: 300px;
-}
-
-.gallery a {
-    display: inline-block;
-    float: left;
-    max-width: 300px;
-    margin-right: 10px;
-    margin-bottom: 10px;
-}
-
 .news {
     display: inline-block;
-    overflow:auto;
+    overflow: auto;
     /*min-width: 70%;*/
-    max-height:90px;
+    max-height: 90px;
     padding: 5px;
     padding-top: 5px;
     padding-bottom: 5px;
@@ -137,59 +50,17 @@ img {
     /*background-color:whitesmoke;*/
 }
 
-.news ul{
-    padding-left:20px;
-    padding-right:0px;
-    margin:0px;
-    font-size:15px;
-}
-
-    .news li{
-        margin-bottom:3px;
-    }
-/* Responsive -----------------------------------------*/
-
-/* Phones  */
-@media only screen and (max-width: 767px) {
-
-    .row {
+    .news ul {
         padding-left: 20px;
-        padding-right: 20px;
+        padding-right: 0px;
+        margin: 0px;
+        font-size: 15px;
     }
 
-    .padding-left, .padding-right {
-        padding: 0px;
+    .news li {
+        margin-bottom: 3px;
     }
 
-    .menu-ul a {
-        min-width: 100%;
-    }
-
-    .site-title {
-        font-size: 22px;
-        margin-top: 10px;
-    }
-
-    .float-left {
-        float: none;
-    }
-
-    .margin-right {
-        margin-right: 0px;
-    }
-}
-
-
-/* Tablets  */
-@media only screen and (min-width: 768px) and (max-width: 1023px) {
-}
-
-
-/* Computers  */
-@media only screen and (min-width: 1024px) and (max-width: 1599px) {
-}
-
-
-/* Big Screen  */
-@media only screen and (min-width: 1600px) {
+.width640 {
+    width: 640px;
 }

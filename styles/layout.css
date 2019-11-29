@@ -1,5 +1,5 @@
 ﻿
-/* Layout -----------------------------------------*/
+/* Layout ----- */
 
 * {
     box-sizing: border-box;
@@ -8,53 +8,81 @@
 body {
     padding: 0;
     margin: 0;
-    font-family: Arial, sans-serif;
+    /*background-color: #ebe5d9;*/
+    background-color: #eae7dc;
 }
 
 header {
-    /*background-color: silver;*/
+    overflow: hidden;
+    /*background-color: #ebe5d9;*/
+    background-color: #eae7dc;
 }
-
-
 
 nav {
-    /*overflow: auto;*/
-    float: right;
     text-align: right;
-    /*background-color: gainsboro;*/
-    /*margin-top: 17px;*/
-    /*min-width: 40%;*/
-    /*padding-right: 10px;*/
+    float: right;
+    margin-top: 14px;
 }
 
-
 main {
-    min-height: 400px;
-    /*overflow:auto;*/
+    min-height: 300px;
+    background-color: white;
 }
 
 footer {
-    /*background-color: silver;*/
-    min-height: 300px;
+    /*background-color: #ebe5d9;*/
+    background-color: #eae7dc;
 }
 
+    footer ul {
+        padding-left: 20px;
+    }
+
+main, footer {
+    overflow: auto;
+}
+
+.header-title {
+    float: left;
+    padding-top: 8px;
+    padding-bottom: 6px;
+}
 
 header, footer {
     padding-left: 5%;
     padding-right: 5%;
-    overflow: auto;
 }
 
-
-footer .row {
-    padding: 0px;
-    margin: 0px;
+.site-title {
+    font-family: 'Roboto', sans-serif;
+    font-size: 140%;
+    font-weight: bold;
+    color:#555;
+    /*padding-top: 30px;
+    padding-bottom: 30px;*/
 }
 
-footer ul {
-    padding-left: 25px;
+.site-description {
+    display: none;
 }
 
+.content-padding {
+    padding-left: 8%;
+    padding-right: 8%;
+}
+
+.content-row {
+    clear: both;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.content-row2 {
+    clear: both;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-color: whitesmoke;
+}
 
 /* Sticky Header  -----------------------------------------*/
 
@@ -62,22 +90,15 @@ header {
     position: fixed;
     top: 0;
     width: 100%;
-    height: 44px;
-    overflow:hidden;
 }
 
 #header2 {
-        height: 44px;
-
-}
-
-main {
-    /*margin-top: 50px;*/
-    /*padding-top: 50px;*/
+    height: 2.3em;
+    background-color:white;
 }
 
 
-/* Html5  -----------------------------------------*/
+/* Html5 ----- */
 
 article,
 aside,
@@ -96,13 +117,33 @@ summary {
 }
 
 
-/* Responsive -----------------------------------------*/
+/* Responsive ----- */
 
 /* Phones  */
 @media only screen and (max-width: 767px) {
 
+    .header-title {
+        padding-top: 4px;
+        padding-bottom: 4px;
+    }
+
+    #header2 {
+    height: 1.8em;
 }
 
+    nav {
+        margin-top: 8px;
+    }
+
+    .site-title {
+        font-size: 120%;
+    }
+
+    .content-padding {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+}
 
 /* Tablets  */
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
@@ -112,9 +153,3 @@ summary {
 /* Computers  */
 @media only screen and (min-width: 1024px) and (max-width: 1599px) {
 }
-
-
-/* Big Screen  */
-@media only screen and (min-width: 1600px) {
-}
-
