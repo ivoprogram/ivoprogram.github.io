@@ -8,6 +8,4 @@ http://ivoprogram.github.io/content/en/menu.html
 http://ivoprogram.github.io/content/en/webjs.html
 http://ivoprogram.github.io/content/en/webutilsjs.html
 http://ivoprogram.github.io/content/en/overwrite.html
-http://ivoprogram.github.io/content/en/aspauth.html
-http://ivoprogram.github.io/content/en/presencecheck.html
-http://ivoprogram.github.io/content/en/articles/web-presence.html
+

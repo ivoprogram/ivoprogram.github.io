@@ -24,6 +24,13 @@ footer {
     padding-top: 10px;
 }
 
+pre {
+    font-size:smaller;
+    padding:10px;
+    border:solid 1px gainsboro;
+}
+
+
 .image-left {
     float: left;
     width: 50%;
@@ -65,3 +72,8 @@ footer {
 .width640 {
     width: 640px;
 }
+
+.max-width640 {
+    max-width: 640px;
+}
+

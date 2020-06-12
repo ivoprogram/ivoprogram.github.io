@@ -1,8 +1,9 @@
 
 # Ivo Gjorgjievski
-## Web Solutions | web products and services
+## Information Technology Solutions
 
-Software Developer / Web Developer / System Administrator
+Technical support, software applications, open source projects.
+Linux software appliances, pre-installed ready to use, for business and more.
 
 
 Website:\
