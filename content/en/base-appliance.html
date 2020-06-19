@@ -72,7 +72,7 @@ wget https://github.com/ivoprogram/linuxapp/releases/download/base/centos7.base-
 
 # Extract to folder
 sudo mkdir /opt/linuxapp
-sudo tar -xf centos7.base-2020-05-12.tar.gz -C /opt/linuxapp/
+sudo tar -xpf centos7.base-2020-05-12.tar.gz -C /opt/linuxapp/
 sudo semanage fcontext -a -t svirt_sandbox_file_t "/opt/linuxapp/centos7.base(/.*)?"
 sudo restorecon -R /opt/linuxapp/centos7.base
 
