@@ -27,3 +27,30 @@
         clear: both;
         display: table;
     }
+
+
+
+    .apps > div {
+       float:left;
+        border:solid 2px gainsboro;
+        padding:5px;
+        padding-top:10px;
+        margin-right:5px;
+        margin-bottom:5px;
+        width:200px;
+        text-align:center;
+        overflow:hidden;
+ 
+    }
+   
+    .apps img{
+        
+        margin-right:10px;
+    }
+ 
+
+    .apps:after {
+        content: "";
+        clear: both;
+        display: table;
+    }
