@@ -3,7 +3,6 @@ http://ivoprogram.github.io/content/en/home.html
 http://ivoprogram.github.io/content/en/services.html
 http://ivoprogram.github.io/content/en/products.html
 http://ivoprogram.github.io/content/en/apps.html
-http://ivoprogram.github.io/content/en/articles.html
 http://ivoprogram.github.io/content/en/about.html
 http://ivoprogram.github.io/content/en/menu.html
 http://ivoprogram.github.io/content/en/webjs.html
