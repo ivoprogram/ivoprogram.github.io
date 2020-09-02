@@ -78,6 +78,8 @@ var webjs = webjs || {};
     // Load url in content area
     webjs.contentLoad = function (url) {
 
+        console.log(url);
+        
         var content = $("<html></html>");
 
         $(content).load(url, function (response, status, xhr) {
