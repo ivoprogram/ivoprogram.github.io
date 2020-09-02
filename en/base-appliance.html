@@ -1,0 +1,135 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Base Appliance</title>
+</head>
+<body>
+
+    <div class="content-padding">
+
+        <h1>Base Appliance</h1>
+
+        <p>
+            The base appliance contain minimal Linux operating system, other software applications are installed on top of this appliance.
+
+        </p>
+
+        <img src="../../images/centos7.base.png" class="max-width640" />
+
+        <p>
+            This image show the appliance operating system and used kernel of the host system.
+
+        </p>
+
+        <strong>Download</strong> 
+        <br />
+        <a target="_blank"
+        href="https://github.com/ivoprogram/linuxapp">https://github.com/ivoprogram/linuxapp</a>
+        <br />
+        <a target="_blank"
+        href="https://github.com/ivoprogram/linuxapp/releases/download/base/centos7.base-2020-06-10.tar.gz">centos7.base-2020-06-10.tar.gz</a>
+
+
+        <h2>Usage</h2>
+
+        <p>
+            To use this appliance following steps has to be performed
+        </p>
+
+        <ul>
+            <li>
+                Install systemd-container
+            </li>
+            <li>
+                Download
+            </li>
+            <li>
+                Extract to folder
+            </li>
+            <li>
+                Start appliance for test
+            </li>
+            <li>
+                Configure systemd-nspawn
+            </li>
+            <li>
+                Start and enable appliance service
+            </li>
+            <li>
+                Use appliance
+            </li>
+            
+        </ul>
+
+        <pre>
+# Install systemd-container 
+sudo yum install systemd-container 
+sudo systemctl enable machines.target
+sudo systemctl start machines.target
+
+# Download
+wget https://github.com/ivoprogram/linuxapp/releases/download/base/centos7.base-2020-06-10.tar.gz
+
+# Extract to folder
+sudo mkdir /opt/linuxapp
+sudo tar -xpf centos7.base-2020-05-12.tar.gz -C /opt/linuxapp/
+sudo semanage fcontext -a -t svirt_sandbox_file_t "/opt/linuxapp/centos7.base(/.*)?"
+sudo restorecon -R /opt/linuxapp/centos7.base
+
+# Start appliance for test
+sudo systemd-nspawn -bD /opt/linuxapp/centos7.base
+user: root
+pass: root
+
+# Exit container
+Ctrl+]]]
+
+# Configure systemd-nspawn
+sudo vi /etc/systemd/system/systemd-nspawn@.service
+ExecStart=/usr/bin/systemd-nspawn --quiet --boot --settings=override --machine=%i
+
+# Create link to container
+sudo ls -l /var/lib/machines
+sudo ln -s /opt/linuxapp/centos7.base /var/lib/machines/centos7.base
+
+# Enable and start appliance service
+sudo systemctl enable systemd-nspawn@centos7.base
+sudo systemctl start systemd-nspawn@centos7.base
+
+# Use appliance
+ssh root@127.0.0.1 -p 55522
+pass: root
+
+        </pre>
+
+
+        <h2>Requirements</h2>
+
+        <p>
+            Requirements for the host system.
+        </p>
+
+        <ul>
+            <li>
+                CentOS 7 or more
+            </li>
+            <li>
+                Fedora 30 or more
+            </li>
+            <li>
+                systemd-container package
+            </li>
+            
+        </ul>
+
+
+    </div>
+
+    <br />
+    <br />
+
+
+</body>
+</html>
+
+
