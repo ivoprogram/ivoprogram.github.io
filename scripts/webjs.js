@@ -52,16 +52,12 @@ var webjs = webjs || {};
         var url = "home.html";
 
         // Get home url from parameters
-        if (document.URL.indexOf("id=") !== -1) {
-            url = document.URL.split("id=")[1];
+        if (document.URL.indexOf("?id=") !== -1) {
+            url = document.URL.split("?id=")[1];
         }
 
-        if (document.URL.indexOf("content=") !== -1) {
-            url = document.URL.split("content=")[1];
-        }
-
-        if (document.URL.indexOf("fbclid=") !== -1) {
-            url = document.URL.split("fbclid=")[0];
+        if (document.URL.indexOf("?content=") !== -1) {
+            url = document.URL.split("?content=")[1];
         }
 
         // Remove additional parameters
@@ -78,8 +74,6 @@ var webjs = webjs || {};
     // Load url in content area
     webjs.contentLoad = function (url) {
 
-        console.log(url);
-        
         var content = $("<html></html>");
 
         $(content).load(url, function (response, status, xhr) {
@@ -122,7 +116,6 @@ var webjs = webjs || {};
 
         // Load url in content area
         var url = $(this).context.href;
-        console.log(url);
         webjs.contentLoad(url);
 
     }// function
