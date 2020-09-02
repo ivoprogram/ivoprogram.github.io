@@ -60,6 +60,10 @@ var webjs = webjs || {};
             url = document.URL.split("content=")[1];
         }
 
+        if (document.URL.indexOf("fbclid=") !== -1) {
+            url = document.URL.split("fbclid=")[0];
+        }
+
         // Remove additional parameters
         url = url.split("?")[0];    
         url = url.split("&")[0];
