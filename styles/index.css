@@ -16,7 +16,7 @@ h2 {
     margin-top: auto;
 }
 
-nav a, footer a, footer a:visited, footer a:active {
+nav a, nav a:visited, nav a:active, footer a, footer a:visited, footer a:active {
     color: #555;
 }
 
@@ -52,7 +52,7 @@ pre {
     /*min-width: 70%;*/
     max-height: 90px;
     padding: 5px;
-    padding-top: 5px;
+    padding-top: 9px;
     padding-bottom: 5px;
     border: solid 2px gainsboro;
     /*background-color:whitesmoke;*/
@@ -60,7 +60,7 @@ pre {
 
     .news ul {
         padding-left: 20px;
-        padding-right: 0px;
+        padding-right: 10px;
         margin: 0px;
         font-size: 15px;
     }
