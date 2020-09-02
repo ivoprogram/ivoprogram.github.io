@@ -3,7 +3,7 @@
 
 TITLE:			WebJS Framework
 DESCRIPTION:	WebJS is a web framework for client side web development.
-VERSION:		2.0 2019-11-28
+VERSION:		3.0 2020-09-01
 CODE:			github.com/ivoprogram/webjs
 LICENSE:		GNU General Public License v3.0 http://www.gnu.org/licenses/gpl.html
 DEPENDENCY:     JQuery
@@ -20,7 +20,6 @@ var webjs = webjs || {};
 // Closure 
 (function () {
 
-    var homePage = "home.html";
 
     // ready
     $(document).ready(function () {
@@ -32,7 +31,7 @@ var webjs = webjs || {};
     // init
     function init() {
 
-         // Check if initialized.
+        // Check if initialized.
         if (webjs.init) { return; }
         else { webjs.init = true; }
 
@@ -45,30 +44,24 @@ var webjs = webjs || {};
     } // function
 
 
+
     // homeUrl
     function homeUrl() {
 
-        // Get home url from variable or url parameters
-        var url = homePage;
+        // Get home url from variable
+        var url = "home.html";
 
-        if (document.URL.indexOf("c=") !== -1)
-        {
-            url = document.URL.split("c=")[1];
+        // Get home url from parameters
+        if (document.URL.indexOf("id=") !== -1) {
+            url = document.URL.split("id=")[1];
         }
 
         if (document.URL.indexOf("content=") !== -1) {
             url = document.URL.split("content=")[1];
         }
 
-        if (document.URL.indexOf("a=") !== -1) {
-            url = "articles/" + document.URL.split("a=")[1];
-        }
-
-        if (document.URL.indexOf("article=") !== -1) {
-            url = "articles/" + document.URL.split("article=")[1];
-        }
-
-        url = url.split("?")[0];    // Remove additional parameters
+        // Remove additional parameters
+        url = url.split("?")[0];    
         url = url.split("&")[0];
 
         return url;
@@ -76,27 +69,6 @@ var webjs = webjs || {};
     } // function
 
 
-    // contentRequest
-    webjs.contentRequest = function (event) {
-
-        // Avoid target
-        if ($(this).attr("target")) {
-            return;
-        }
-
-        // Avoid anchors
-        if ($(this).context.hash.indexOf("#") === 0) {
-            return;
-        }
-
-        // Stop click propagation
-        event.preventDefault();
-
-        // Load url in content area
-        var url = $(this).context.href;
-        webjs.contentLoad(url);
-
-    }// function
 
 
     // Load url in content area
@@ -123,6 +95,30 @@ var webjs = webjs || {};
 
         });
     } // function
+
+
+
+    // contentRequest
+    webjs.contentRequest = function (event) {
+
+        // Avoid target
+        if ($(this).attr("target")) {
+            return;
+        }
+
+        // Avoid anchors
+        if ($(this).context.hash.indexOf("#") === 0) {
+            return;
+        }
+
+        // Stop click propagation
+        event.preventDefault();
+
+        // Load url in content area
+        var url = $(this).context.href;
+        webjs.contentLoad(url);
+
+    }// function
 
 
 }()); // Closure 
