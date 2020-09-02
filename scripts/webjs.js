@@ -122,6 +122,7 @@ var webjs = webjs || {};
 
         // Load url in content area
         var url = $(this).context.href;
+        console.log(url);
         webjs.contentLoad(url);
 
     }// function
