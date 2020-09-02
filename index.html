@@ -11,12 +11,16 @@
     <script type="text/javascript">
 
         // Split parameters and pass them to target url
-        var url = "content/en/index.html";
+        var url = "";
         var params = window.location.href.split("?")[1];
         params = (params ? "?" + params : "");
 
+        // 
+        if(params){ url =  "en/index.html" + params; }
+        else { url = "en/"; }
+
         // window.location.replace(url + params);
-        window.location.href = url + params;
+        window.location.href = url;
 
     </script>
 
@@ -25,7 +29,8 @@
     <br />
     <h1>Information Technology Solutions</h1>
     <h2>Information technology technical support, operating systems, computer networks, software applications.</h2>
-    <a href="content/en/index.html">index.html</a>
+    <a href="en/index.html">English</a>
+    <a href="mk/index.html">Македонски</a>
  
     <br />
     <br />

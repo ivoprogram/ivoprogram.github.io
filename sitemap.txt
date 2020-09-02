@@ -1,12 +1,16 @@
-http://ivoprogram.github.io/content/en/index.html
-http://ivoprogram.github.io/content/en/home.html
-http://ivoprogram.github.io/content/en/services.html
-http://ivoprogram.github.io/content/en/products.html
-http://ivoprogram.github.io/content/en/apps.html
-http://ivoprogram.github.io/content/en/about.html
-http://ivoprogram.github.io/content/en/menu.html
-http://ivoprogram.github.io/content/en/webjs.html
-http://ivoprogram.github.io/content/en/webutilsjs.html
-http://ivoprogram.github.io/content/en/overwrite.html
-http://ivoprogram.github.io/content/en/base-appliance.html
+http://ivoprogram.github.io/en/index.html
+http://ivoprogram.github.io/en/home.html
+http://ivoprogram.github.io/en/services.html
+http://ivoprogram.github.io/en/products.html
+http://ivoprogram.github.io/en/apps.html
+http://ivoprogram.github.io/en/about.html
+http://ivoprogram.github.io/en/menu.html
+http://ivoprogram.github.io/en/webjs.html
+http://ivoprogram.github.io/en/webutilsjs.html
+http://ivoprogram.github.io/en/overwrite.html
+http://ivoprogram.github.io/en/base-appliance.html
 
+http://ivoprogram.github.io/mk/index.html
+http://ivoprogram.github.io/mk/home.html
+http://ivoprogram.github.io/mk/about.html
+http://ivoprogram.github.io/mk/menu.html
