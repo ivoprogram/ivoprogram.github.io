@@ -2,16 +2,17 @@
 
 body {
     background-color: #eae7dc;
+    background-color: #fafafb;
 }
 
 
 header, footer {
-    background-color: #eae7dc;
-
+    /* background-color: #eae7dc; */
+    background-color: #badfe7;
 }
 
 main {
-        background-color: white;
+    background-color: white;
 
 }
 

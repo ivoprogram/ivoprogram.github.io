@@ -8,14 +8,13 @@
 body {
     padding: 0;
     margin: 0;
-    /*background-color: #ebe5d9;*/
-    background-color: #eae7dc;
+    /* background-color: #badfe7; */
+    background-color: #c4dbf6;
 }
 
 header {
     overflow: hidden;
-    /*background-color: #ebe5d9;*/
-    background-color: #eae7dc;
+    background-color: #c4dbf6;
 }
 
 nav {
@@ -30,8 +29,7 @@ main {
 }
 
 footer {
-    /*background-color: #ebe5d9;*/
-    background-color: #eae7dc;
+    background-color: #c4dbf6;
 }
 
     footer ul {
@@ -54,7 +52,7 @@ header, footer {
 }
 
 .site-title {
-    font-family: 'Roboto', sans-serif;
+    /* font-family: 'Roboto', sans-serif; */
     font-size: 140%;
     font-weight: bold;
     color:#555;
